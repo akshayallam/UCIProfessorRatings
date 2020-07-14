@@ -9,51 +9,6 @@ chrome.contextMenus.create(menu);
 chrome.contextMenus.onClicked.addListener(function(clickData){  
 	// when clicked on "UCI Professor Ratings" in the context menu
     if (clickData.menuItemId == "UCI Professor Ratings" && clickData.selectionText){  
-		// var lastName = getLast(clickData.selectionText);
-		// lastName = fixWhiteSpace(lastName);
-		// var departmentInput = prompt("Select One Of The Departments Below:          [Academic Services, Accounting, Administration, Aerospace Studies, African-American Studies, Agriculture, Animal Science, Anthropology, Architecture, Art, Asian Studies, Biochemistry, Biological Sciences, Biology, Biomedical, Business, Chemical Engineering, Chemistry, Child Development, Chinese, Civil Engineering, Classics, Cognitive Science, Communication, Comparative Literature, Composition, Computer Animation, Computer Information Systems, Computer Science, Counseling, Creative Writing, Criminal Justice, Criminology, Criminology, Law & Society, Culinary Arts, Dance, Design, Digital Arts, Dramatic Arts, Early Childhood Education, Earth Science, East Asian Lang. & Literature, Ecology & Evolutionary Biology, Economics, Education, Electrical Engineering, Engineering, English, English As A Second Language, Environmental Engineering, Environmental Science, Environmental Studies, Ethnic Studies, Film, Finance, Fine Arts, Foreign Languages, French, General Studies, Genetics, Geography, Geology, German, Gerontology, Global Studies, Graphic Arts, Greek, Guidance, Health & Public Safety, Health Sciences, History, Honors, Hospitality, Humanities, Informatics, Information Science, International Studies, Italian, Japanese, Journalism, Korean, Languages, Latin American Studies, Law, Life Science, Linguistics, Literature, Logic & Philosophy, Management, Marine Sciences, Marketing, Materials Engineering, Mathematics, Mechanical Engineering, Medicine, Microbiology, Music, Neurobiology & Behavior, Neuropsychiatry, Nursing, Pharmaceutical Sciences, Philosophy, Physical Education, Physics & Astronomy, Planning, Policy & Design, Policy Planning & Development, Political Science, Psychiatry & Human Behavior, Psychology, Psychology & Social Behavior, Public Health, Recreation, Religion, Russian, Russian Studies, Science, Social Ecology Administration, Social Science, Social Work, Sociology, Spanish, Statistics, Studio Art, Systems Engineering, Theater, University Studies, Urban Planning, Women's Studies, Writing]", "Computer Science");
-		// var department = fixedEncodeURI(departmentInput);
-		// var rmpUrl = 'https://www.ratemyprofessors.com/search.jsp?queryBy=teacherName&queryoption=HEADER&facetSearch=true'
-		// 			+ '&query=' + lastName
-		// 			+ '&schoolName=university+of+california+irvine'
-		// 			+ '&dept=' + department;
-		// console.log(rmpUrl); // console
-		// var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-		// var profUrl = 'http://www.ratemyprofessors.com';
-		// var fullUrl = proxyUrl + rmpUrl;
-		// fetch(fullUrl).then(r => r.text()).then(result => {
-		// 	var profDiv = document.createElement('div'); 
-		// 	profDiv.innerHTML = result;
-		// 	var profArray = profDiv.getElementsByClassName('listing PROFESSOR')
-		// 	// if profArray empty
-		// 	// Some UCI department names don't match the RMP department names, so no input
-		// 	if (profArray.length == 0){
-		// 		alert("No Results Found \n\nTry the following: \n\n - An Alternative Department \n - No Input For Department \n\nIf Not, The Professor May Not Be Available on RMP");
-		// 	}
-		// 	console.log(profArray);	// console
-		// 	var count = 0;
-		// 	var index = 0;
-		// 	for (i = 0; i < profArray.length; i++) {
-		// 		var profName = profArray[i].getElementsByClassName('main')[0].innerHTML;
-		// 		console.log(parseName(profName)); // console
-		// 		console.log(parseName(clickData.selectionText)); // console
-		// 		if (parseName(profName) === parseName(clickData.selectionText)){
-		// 			count = count + 1;
-		// 			index = i;
-		// 		}
-		// 	}
-		// 	// if multiple matches
-		// 	if (count > 1){
-		// 		chrome.tabs.create({ url: rmpUrl });
-		// 		alert("Multiple Professors With The Same Name");
-		// 	}
-		// 	// if single match
-		// 	if (count == 1){
-		// 		profUrl = profUrl + profArray[index].getElementsByTagName('a')[0].getAttribute('href');
-		// 		console.log(profUrl); // console
-		// 		chrome.tabs.create({ url: profUrl });
-		// 	}
-		// }) 
 		// extract last name from selected text to be used for initial search
 		var lastName = getLast(clickData.selectionText);
 		lastName = fixWhiteSpace(lastName);
