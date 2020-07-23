@@ -3,7 +3,7 @@
 
   "name": "UCI Professor Ratings",
   "description": "Quickly access the professor's RateMyProfessor page from the Schedule of Classes page with just a few clicks",
-  "version": "1.5",
+  "version": "1.6",
   "icons": {
     "16": "images/final-16.png",
     "32": "images/final-32.png",
